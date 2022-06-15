@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Joyeria", "Joyeria\Joyeria.csproj", "{AB300316-3A8A-45A4-82BA-FEB867137281}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB300316-3A8A-45A4-82BA-FEB867137281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB300316-3A8A-45A4-82BA-FEB867137281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB300316-3A8A-45A4-82BA-FEB867137281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB300316-3A8A-45A4-82BA-FEB867137281}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C8C3A3E-2E15-47E4-A611-415764EF79BA}
+	EndGlobalSection
+EndGlobal

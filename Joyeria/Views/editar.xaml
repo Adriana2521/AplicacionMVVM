@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="Joyeria.Views.editar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Joyeria.Views"
+             xmlns:models="clr-namespace:Joyeria.Models"
+              xmlns:sys="clr-namespace:System;assembly=mscorLib" 
+             mc:Ignorable="d" 
+             d:DesignHeight="320" d:DesignWidth="650">
+
+    <UserControl.Resources>
+        <ObjectDataProvider x:Key="Categorias list" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="models:Categoria"></x:Type>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <Style x:Key="Titulo2" TargetType="TextBlock" >
+            <Setter Property="Background" Value="#586179"></Setter>
+            <Setter Property="FontSize" Value="30"></Setter>
+            <Setter Property="Padding" Value="8 "></Setter>
+            <Setter Property="TextAlignment" Value="Center"></Setter>
+            <Setter Property="FontFamily" Value="../Assets/#Pop Art"></Setter>
+            <Setter Property="Margin" Value="15 15 15 0"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            
+
+
+        </Style>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        <Style  x:Key="Campos" TargetType="TextBlock">
+            <Setter Property="Padding" Value="12" ></Setter>
+            <Setter Property="Margin" Value="8 0 7 2"></Setter>
+            <Setter Property="FontFamily" Value="../Assets"></Setter>
+        </Style>
+        <Style x:Key="Cuadros" TargetType="TextBox">
+            <Setter Property="Padding" Value="0"></Setter>
+            <Setter Property="Margin" Value="18 -15 15 -4"></Setter>
+        </Style>
+
+
+    </UserControl.Resources>
+    
+
+
+        <StackPanel Background="#7A8">
+            <TextBlock Text="Agenda tuviaje ahora!!" Style="{StaticResource Titulo2}"></TextBlock>
+
+        <TextBlock Text="DESTINO:" Style="{StaticResource Campos}"></TextBlock>
+        <TextBox Text="{Binding Cata.Destino}" Style="{StaticResource Cuadros}"></TextBox>
+        <TextBlock Text="CATEGORIA:" Style="{StaticResource Campos}" ></TextBlock>
+        <ComboBox SelectedItem= "{Binding Cata.Categoria}" 
+                  ItemsSource="{Binding Source={StaticResource Categorias list}}"   ></ComboBox>
+        <TextBlock Text="PAIS:"  Style="{StaticResource Campos}"   ></TextBlock>
+        <TextBox Text="{Binding Cata.Pais}"  Style="{StaticResource Cuadros}"></TextBox>
+        <TextBlock Text="PRECIO:" Style="{StaticResource Campos}"></TextBlock>
+        <TextBox  Text="{Binding Cata.precio}" Style="{StaticResource Cuadros}"></TextBox>
+        <TextBlock Text="Foto" Style="{StaticResource Campos}"></TextBlock>
+
+        <TextBox Text="{Binding Cata.Foto}" Style="{StaticResource Cuadros}"></TextBox>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Command="{Binding EditarCommand}" Width="50"  Height="17" Margin="17 10 4 -7" Background="#7A8295" Foreground="Black">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Vista}">
+                                <Setter Property="Command" Value="{Binding EditarCommand}"></Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                
+                Guardar</Button>
+
+            <Button Command="{Binding CancelarCommand}" Width="50"  Height="17" Margin="17 10 4 -7" Background="#7A8295" Foreground="Black">Cancelar</Button>
+
+        </StackPanel>
+
+    </StackPanel>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</UserControl>
